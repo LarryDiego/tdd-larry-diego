@@ -34,4 +34,16 @@ public class ContaBancariaTest {
 
         Assert.assertEquals(valorEsperado, saldoFinal, 0.0);
     }
+
+    @Test
+    public void deveRetornarOSaldoDaContaCorretamenteQuandoUsarOMetodoConsultarSaldo() {
+        ContaBancaria conta = new ContaBancaria(1994, "Larry", 150.0);
+        double valorEsperado = 100.0;
+
+        conta.sacar(50);
+
+        double saldoConta = conta.consultarSaldo();
+
+        Assert.assertEquals(valorEsperado, saldoConta, 0.0);
+    }
 }
