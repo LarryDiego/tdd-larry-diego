@@ -23,4 +23,9 @@ public class ContaBancaria {
         if (valor > saldo) return;
         saldo -=valor;
     }
+
+    public double consultarSaldo() {
+        double saldoConta = saldo;
+        return saldoConta;
+    }
 }
