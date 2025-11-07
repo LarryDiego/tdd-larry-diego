@@ -25,7 +25,6 @@ public class ContaBancaria {
     }
 
     public double consultarSaldo() {
-        double saldoConta = saldo;
-        return saldoConta;
+        return saldo;
     }
 }
