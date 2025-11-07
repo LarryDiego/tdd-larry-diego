@@ -12,4 +12,26 @@ public class ContaBancariaTest {
 
         Assert.assertEquals(valorEsperado, saldoFinal, 0.0);
     }
+
+    @Test
+    publc void devePermitirSacarValorDaContaQuandoInformadoValorMenorOuIgualAoSaldo() {
+        ContaBancaria conta = new ContaBancaria(1994, "Larry", 50.0);
+        double valorEsperado = 30.0;
+
+        conta.sacar(20.0);
+        double saldoFinal = conta.getSaldo();
+
+        Assert.assertEquals(valorEsperado, saldoFinal, 0.0);
+    }
+
+    @Test
+    publc void deveManterOMesmoValorDaContaQuandoInformadoValorMaiorQueOSaldo() {
+        ContaBancaria conta = new ContaBancaria(1994, "Larry", 50.0);
+        double valorEsperado = 50.0;
+
+        conta.sacar(100.0);
+        double saldoFinal = conta.getSaldo();
+
+        Assert.assertEquals(valorEsperado, saldoFinal, 0.0);
+    }
 }
