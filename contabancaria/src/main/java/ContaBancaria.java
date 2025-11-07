@@ -39,12 +39,7 @@ public class ContaBancaria {
     }
 
     public void sacar(double valor) {
-        double novoSaldo = saldo;
-        if (saldo >= valor) {
-            novoSaldo -= valor;
-            saldo = novoSaldo;
-        } else {
-            saldo = novoSaldo;
-        }
+        if (valor > saldo) return;
+        saldo -=valor;
     }
 }
