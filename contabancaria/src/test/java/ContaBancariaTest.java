@@ -14,7 +14,7 @@ public class ContaBancariaTest {
     }
 
     @Test
-    publc void devePermitirSacarValorDaContaQuandoInformadoValorMenorOuIgualAoSaldo() {
+    public void devePermitirSacarValorDaContaQuandoInformadoValorMenorOuIgualAoSaldo() {
         ContaBancaria conta = new ContaBancaria(1994, "Larry", 50.0);
         double valorEsperado = 30.0;
 
@@ -25,7 +25,7 @@ public class ContaBancariaTest {
     }
 
     @Test
-    publc void deveManterOMesmoValorDaContaQuandoInformadoValorMaiorQueOSaldo() {
+    public void deveManterOMesmoValorDaContaQuandoInformadoValorMaiorQueOSaldo() {
         ContaBancaria conta = new ContaBancaria(1994, "Larry", 50.0);
         double valorEsperado = 50.0;
 
